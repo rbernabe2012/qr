@@ -25,6 +25,12 @@
         h1 {
             text-align: center;
             color: #333;
+            font-size: 1.5rem;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 1.5rem auto;
+            max-width: 200px;
         }
         form {
             display: flex;
@@ -60,6 +66,7 @@
 </head>
 <body>
     <div class="form-container">
+        <img src="{{ url_for('static', filename='images/axis_logo.png') }}" alt="Axis Brokers Logo" class="logo">
         <h1>Confirmación de asistencia - Charla Axis Brokers</h1>
         <form action="/submit" method="post">
             <label for="name">Nombre:</label>
