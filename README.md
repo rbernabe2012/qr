@@ -39,32 +39,16 @@ set SENDGRID_KEY="tu-clave-de-api-de-sendgrid"
 
 **Nota:** Reemplaza el valor de ejemplo con tu clave de API real de SendGrid.
 
-### 3. Ejecuta la Aplicación
-Una vez instaladas las dependencias y configurada la variable de entorno, inicia la aplicación web:
+### 3. Ejecuta la Aplicación (para Desarrollo Local)
+Una vez instaladas las dependencias y configurada la variable de entorno, puedes iniciar la aplicación en tu máquina local:
 
 ```bash
 python3 app.py
 ```
 
-Esto iniciará un servidor de desarrollo de Flask, normalmente en `http://127.0.0.1:5000`.
+Esto iniciará un servidor de desarrollo de Flask en `http://127.0.0.1:5000`.
 
-### 4. Genera y Usa el Código QR
-Para que el código QR funcione en tu red local (y no solo en tu máquina), necesitas generarlo usando la dirección IP de tu computadora.
+### 4. Uso del Código QR
+El archivo `qr_code.png` incluido en este proyecto ya está configurado para apuntar a la URL de producción final: `https://erp.open-revolution.com/axisbrokers`.
 
-**A. Encuentra tu Dirección IP Local:**
--   **En macOS/Linux:** Usa el comando `ifconfig` o `ip a`.
--   **En Windows:** Usa el comando `ipconfig`.
--   Busca una dirección que se parezca a `192.168.x.x`, `10.x.x.x`, etc.
-
-**B. Genera el Código QR:**
-Ejecuta el script de generación y pásale tu dirección IP como argumento:
-
-```bash
-python3 generate_qr.py tu-direccion-ip-local
-```
-*Ejemplo:*
-```bash
-python3 generate_qr.py 192.168.1.10
-```
-
-Esto creará un archivo `qr_code.png` que apunta a tu servidor. Ahora, los asistentes pueden escanear este código desde sus dispositivos para acceder al formulario.
+**No es necesario regenerarlo.** Simplemente puedes usar este archivo de imagen para tus materiales impresos o digitales. Los asistentes que lo escaneen serán dirigidos al formulario correcto.
